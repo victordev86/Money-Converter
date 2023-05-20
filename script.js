@@ -11,12 +11,13 @@
 
 
 const convertButton = document.querySelector("#convert-button")
+const convertSelect = document.querySelector(".converter-para")
+
 
 function convertValue() {
     const inputValue = document.querySelector("#input-currency").value
     const resultReal = document.querySelector(".result-real")
     const resultConverted = document.querySelector(".result-converted")
-    const convertSelect = document.querySelector(".converter-para")
 
     const dolarToday = 5.2
     
@@ -42,6 +43,26 @@ function convertValue() {
         currency: "BRL"
     }).format(inputValue)
 }
+
+function changeCurrency() {
+    const currency = document.querySelector(".currency")
+    const flag = document.querySelector(".usa-flag")
+
+    if (convertSelect.value == "dolar") {
+        currency.innerHTML = "Dólar Americano"
+        flag.src = "./assets/usa-dolar.png"
+    }
+
+    if (convertSelect.value == "euro") {
+        currency.innerHTML = "Euro"
+        flag.src = "./assets/euro.png"
+    }
+
+    convertValue()
+}
+
+
+convertSelect.addEventListener("change", changeCurrency)
 
 convertButton.addEventListener("click", convertValue)
 
