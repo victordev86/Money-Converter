@@ -1,0 +1,148 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background: #8A51FC;
+}
+
+.money-gif {
+    width: 250px;
+    margin: 20px auto;
+    display: block;
+}
+
+main {
+    width: 375px;
+    background: #F4F4F4;
+    border-radius: 20px;
+    padding: 40px 24px 23px;
+    margin: 0 auto 20px;
+}
+
+label {
+    color: #777777;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+}
+
+#valor {
+    font-weight: 700;
+}
+
+.converter-de {
+    display: block;
+    background: #FFFFFF;
+    border: 1px solid #BBBBBB;
+    border-radius: 4px;
+    width: 327px;
+    height: 48px;
+    color: #555555;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 18px;
+    margin: 6px 0 24px;
+    padding-left: 10px;
+    appearance: none;
+}
+
+.converter-para {
+    display: block;
+    background: #FFFFFF;
+    border: 1px solid #BBBBBB;
+    border-radius: 4px;
+    width: 327px;
+    height: 48px;
+    color: #555555;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 18px;
+    margin: 6px 0 24px;
+    padding-left: 10px;
+    appearance: none;
+}
+
+input {
+    display: block;
+    background: #FFFFFF;
+    border: 1px solid #BBBBBB;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    width: 327px;
+    height: 48px;
+    margin: 6px 0 24px;
+}
+
+input::placeholder {
+    color: #555555;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 18px;
+    padding-left: 10px;
+}
+
+button {
+    background: #772FD3;
+    border-radius: 5px;
+    width: 327px;
+    height: 48px;
+    color: #FFFFFF;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 18px;
+    margin-bottom: 26px;
+    cursor: pointer;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+button:active {
+    opacity: 0.6;
+}
+
+section {
+    border: 1px solid #772FD3;
+    border-radius: 20px;
+    text-align: center;
+}
+
+.real {
+    margin-top: 13px;
+}
+
+p {
+    color: #777777;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+}
+
+.result-real {
+    color: #555555;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 18px;
+    margin-top: 5px;
+}
+
+.arrow {
+    margin: 15px 0;
+}
+
+.dolar-euro {
+    margin-bottom: 13px;
+}
+
+.result-converted {
+    color: #555555;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 18px;
+    margin-top: 5px;
+}
