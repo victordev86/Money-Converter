@@ -95,6 +95,8 @@ button {
     font-size: 18px;
     line-height: 18px;
     margin-bottom: 26px;
+    box-shadow: 0px 4px 5px 0px dimgrey;
+    border: none;
     cursor: pointer;
 }
 

@@ -8,6 +8,11 @@
 // 8 - Alterar o valor em Real (R$) que aparece na aplicação com o innerHTML e formatar usando o Intl.NumberFormat
 // 9 - Utilizar o "if" para definir a opcão a ser utilizada se é dolar ou euro
 // 10 - Formatar ambas opções e a operação será o valor do imput / pela cotação da moeda escolhida.
+// 11 - Criar outro addEventListener "change" para mudar o nome da moeda e a bandeira na aplicação dependendo da opção escolhida
+// 12 - Criar a função changeCurrency() e mapear o texto com o nome da moeda e a bandeira respectiva
+// 13 - Aplicar o if para alterar o texto (innerHTML) e a imagem da bandeira (src) da moeda escolhida.
+// 14 - Chamar a função convertValue() dentro da função changeCurrency.
+// 15 - Assim, toda vez que alterar a opção da moeda, ele altera tbm o calculo automaticamente.
 
 
 const convertButton = document.querySelector("#convert-button")
