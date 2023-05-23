@@ -16,10 +16,11 @@
 
 
 const convertButton = document.querySelector("#convert-button")
+const selectFrom = document.querySelector(".converter-de")
 const convertSelect = document.querySelector(".converter-para")
 
 
-function convertValue() {
+function convertValue( ) {
     const inputValue = document.querySelector("#input-currency").value
     const resultReal = document.querySelector(".result-real")
     const resultConverted = document.querySelector(".result-converted")
