@@ -1,12 +1,12 @@
 // 1 - Primeiro mapear o <button> de conversão
 // 2 - Criar addEventListener para quando eu clicar no botão, ele pegar o valor de denro do <input>
-// 3 - Criar uma função "convertValue()", onde eu mapeio o valor do <input>
+// 3 - Criar uma função "convertValue()", onde eu mapeio o valor do <input> .value
 // 4 - Inserir o convertValue() no addEventListener junto ao "click"
-// 5 - Criar variável dolarToday com a cotação do dolar e o euroToday com a cotação do euro
+// 5 - Criar variável dolarToday com a cotação do dolar e outras variáveis com demais moedas
 // 6 - Mapear o resultado em Real "result-real" e o resuldado da conversão "result-converted" com querySelector
-// 7 - Mapear o <select> para fazer a opção entre dolar e euro
+// 7 - Mapear o <select> para fazer a opção entre as moedas
 // 8 - Alterar o valor em Real (R$) que aparece na aplicação com o innerHTML e formatar usando o Intl.NumberFormat
-// 9 - Utilizar o "if" para definir a opcão a ser utilizada se é dolar ou euro
+// 9 - Utilizar o "if" para definir a opcão a ser utilizada (qual moeda)
 // 10 - Formatar ambas opções e a operação será o valor do imput / pela cotação da moeda escolhida.
 // 11 - Criar outro addEventListener "change" para mudar o nome da moeda e a bandeira na aplicação dependendo da opção escolhida
 // 12 - Criar a função changeCurrency() e mapear o texto com o nome da moeda e a bandeira respectiva
@@ -16,21 +16,24 @@
 
 
 const convertButton = document.querySelector("#convert-button")
-const selectFrom = document.querySelector(".converter-de")
 const convertSelect = document.querySelector(".converter-para")
 
+const dolarToday = 5
+const euroToday = 5.4
+const poundToday = 6.3
+const bitcoinToday = 133900
+const realToday = 1
 
-function convertValue( ) {
+
+function convertValue() {
     const inputValue = document.querySelector("#input-currency").value
     const resultReal = document.querySelector(".result-real")
     const resultConverted = document.querySelector(".result-converted")
 
-    const dolarToday = 5
-    const euroToday = 5.4
-    const poundToday = 6.3
-    const bitcoinToday = 133900
-    const realToday = 1
-
+    resultReal.innerHTML = new Intl.NumberFormat("pt-BR", {
+        style: "currency",
+        currency: "BRL"
+    }).format(inputValue)
 
     if (convertSelect.value == "dolar") {
         resultConverted.innerHTML = new Intl.NumberFormat("en-US", {
@@ -59,18 +62,6 @@ function convertValue( ) {
             currency: "BTC"
         }).format(inputValue / bitcoinToday)
     }
-
-    if (convertSelect.value == "real") {
-        resultConverted.innerHTML = new Intl.NumberFormat("pt-BR", {
-            style: "currency",
-            currency: "BRL"
-        }).format(inputValue / realToday)
-    }
-
-    resultReal.innerHTML = new Intl.NumberFormat("pt-BR", {
-        style: "currency",
-        currency: "BRL"
-    }).format(inputValue)
 }
 
 function changeCurrency() {
@@ -97,15 +88,9 @@ function changeCurrency() {
         flag.src = "./assets/bitcoin.png"
     }
 
-    if (convertSelect.value == "real") {
-        currency.innerHTML = "Real Brasileiro"
-        flag.src = "./assets/brasil-real.png"
-    }
-
     convertValue()
 }
 
+convertButton.addEventListener("click", convertValue)
 
 convertSelect.addEventListener("change", changeCurrency)
-
-convertButton.addEventListener("click", convertValue)
